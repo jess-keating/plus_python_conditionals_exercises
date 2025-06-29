@@ -9,8 +9,17 @@ def can_climb(has_helmet: bool, has_rope: bool):
     Returns:
         - a boolean that is true when the climber is allowed to climb, and false otherwise.
     """
+    if has_helmet == True and has_rope == True:
+        return True
+    if has_helmet == True and has_rope == False:
+        return False
+    if has_helmet == False and has_rope == True:
+        return False
+    if has_helmet == False and has_rope == False:
+        return False
 
-    pass
+    return has_helmet and has_rope
+
 
 def red_light_camera(light_colour: str, car_detected: bool):
     """A function to determine whether or not a driver should get a ticket 
@@ -26,6 +35,7 @@ def red_light_camera(light_colour: str, car_detected: bool):
     """
     pass
 
+
 def can_ride_rollercoaster(rider_height: float):
     """Only people who are over 120cm in height can ride the rollercoaster.
     
@@ -36,6 +46,7 @@ def can_ride_rollercoaster(rider_height: float):
     """
 
     pass
+
 
 def login(password: str):
     """Only users who enter the password "quartzgleam?1" can log in successfully.
