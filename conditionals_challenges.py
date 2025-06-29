@@ -33,7 +33,20 @@ def red_light_camera(light_colour: str, car_detected: bool):
 
     Returns: A boolean that is true if a car ran the red light, and false otherwise.
     """
-    pass
+    if light_colour == "Red" and car_detected == True:
+        return True
+    if light_colour == "Amber" and car_detected == True:
+        return False
+    if light_colour == "Green" and car_detected == True:
+        return False
+    if light_colour == "Red" and car_detected == False:
+        return False
+    if light_colour == "Amber" and car_detected == False:
+        return False
+    if light_colour == "Green" and car_detected == False:
+        return False    
+    
+    return light_colour and car_detected
 
 
 def can_ride_rollercoaster(rider_height: float):
@@ -44,8 +57,14 @@ def can_ride_rollercoaster(rider_height: float):
         
     Returns: a boolean representing whether or not the prospective rider is allowed on the rollercoaster.
     """
-
-    pass
+    if rider_height < 120.0:
+        return False
+    if rider_height > 120.0:
+        return True
+    if rider_height == 120.0:
+        return False
+    
+    return rider_height
 
 
 def login(password: str):
@@ -57,5 +76,9 @@ def login(password: str):
     Returns:
         - a boolean representing whether or not the user's password was correct.
     """
+    if password == "quartzgleam?1":
+        return True
+    else:
+        return False
 
-    pass
+    return password
